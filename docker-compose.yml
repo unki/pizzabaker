@@ -1,0 +1,7 @@
+version: "3.9"
+
+services:
+  pizza:
+    build: .
+    ports:
+      - "5000:5000"
