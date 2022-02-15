@@ -21,8 +21,9 @@ FROM python:3.9-alpine
 EXPOSE 5000
 ENV FLASK_APP=app
 ENV FLASK_RUN_HOST=0.0.0.0
+ENV PORT=5000
 
 WORKDIR /app
-CMD venv/bin/flask run
+CMD venv/bin/flask run --port=$PORT
 
 COPY --from=build /app/ .
